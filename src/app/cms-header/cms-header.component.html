@@ -1,0 +1,35 @@
+<div class='cmsheader'>
+  <span class="menuBtn" (click)="openMenu()" >&#9776;</span>
+<ul class='tabs'>
+
+  <li *ngIf="isclub"  class="{{activeTab =='players'?'active':''}}">
+      <a  (click)="loadTabs('players','cms')"  href="javascript:void(0);" >players</a>
+  </li>
+  <li *ngIf="isclub" class="{{activeTab =='coaches'?'active':''}}">
+    <a  (click)="loadTabs('coaches', 'cms')" href="javascript:void(0);" >Coaches</a>
+</li>
+<li *ngIf="isclub" class="{{activeTab =='teams'?'active':''}}">
+ <a   (click)="loadTabs('teams','cms')" href="javascript:void(0);" >Teams</a>
+</li>
+<li *ngIf="isclub"  class="{{activeTab =='clubs'?'active':''}}">
+  <a  (click)="loadTabs('clubs','cms')" href="javascript:void(0);">Clubs</a>
+</li>
+<li *ngIf="isclub"  class="{{activeTab =='activities'?'active':''}}">
+  <a  (click)="loadTabs('activities', 'cms')" href="javascript:void(0);" >Activities</a>
+</li>
+<li *ngIf="!isclub"  class="{{activeTab =='users'?'active':''}}">
+  <a   (click)="loadTabs('users','portfolio')"  href="javascript:void(0);" >players</a>
+</li>
+<li *ngIf="!isclub"  class="{{activeTab =='recruiters'?'active':''}}">
+  <a   (click)="loadTabs('recruiters', 'portfolio')"  href="javascript:void(0);" >Recruiters</a>
+</li>
+</ul>
+<!-- <button type="button" class="btn btn-light m-2">LOGOUT</button> -->
+<span class="logoutBtn" (click)='logOut()'>LOGOUT</span>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeMenu()">&times;</a>
+  <a   (click)="changeCms('club')">Club</a>
+  <a (click)="changeCms('Portfolio')">Portfolio</a>
+  
+</div>

@@ -1,0 +1,77 @@
+$size: 45px;
+.body-section{
+  margin: 2em;
+}
+.ground{
+  width: 25%;
+    margin: 0 auto;
+    height: 500px;
+    border: 1px solid;
+    position: relative;
+    background: #0080009e;
+}
+.halfLine{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  border-color: black;
+}
+
+.goal {
+  width: 50px;
+  height: 20px;
+  margin: 0 auto;
+  border: 1px solid;
+  /* border-top-style: none; */
+}
+
+.goal.bottomGoalpost {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  left: 0;
+  border-bottom-style: none;
+}
+
+.topGoalpost{
+  border-top-style: none;
+}
+
+.centerCircle{
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  position: absolute;
+  top: 43%;
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+
+.strickers{
+  position: absolute;
+  width: 100%;
+  top: 20%;
+}
+.midfielder{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+.defence{
+  position: absolute;
+  width: 100%;
+  top: 80%;
+}
+.player{
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+

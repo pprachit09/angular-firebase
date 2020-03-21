@@ -1,0 +1,112 @@
+<div class="body-section" *ngIf="!isteamedit">
+  <div class='body-content-wrap'>
+    <div class="card">
+      <div class="card-header">
+        <div class="titleAndBatch">
+          <h1 class="modal-title">Teams</h1>
+         </div>
+      </div>
+      <div class="card-body">
+
+        <div class="glob-table-wrapper">
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style=" cursor:pointer; text-align: left;">
+                  Name
+                  <!-- <em class="material-icons {{PasskeysortingOptions.columnName === 'Passkey'?'sort-focus-in':''}}" aria-hidden="true">
+                    {{PasskeysortingOptions.columnName === 'Passkey' && (PasskeysortingOptions.columnOrder === 'ASC'?'arrow_drop_up':'arrow_drop_down')}}
+                  </em> -->
+                </th>
+                <th style="cursor:pointer; text-align: left;" (click)="SetSortingOptions('UserName')">
+                  No of players
+                  <!-- <em class="material-icons {{PasskeysortingOptions.columnName === 'UserName'?'sort-focus-in':''}}" aria-hidden="true">
+                    {{PasskeysortingOptions.columnName === 'UserName' && (PasskeysortingOptions.columnOrder === 'ASC'?'arrow_drop_up':'arrow_drop_down')}}
+                  </em> -->
+                </th>
+                <th style="cursor:pointer; text-align:left;" (click)="SetSortingOptions('RedemptionDate')">
+                  Age limit
+                    <!-- <em class="material-icons {{PasskeysortingOptions.columnName === 'RedemptionDate'?'sort-focus-in':''}}" aria-hidden="true">
+                      {{PasskeysortingOptions.columnName === 'RedemptionDate' && (PasskeysortingOptions.columnOrder === 'ASC'?'arrow_drop_up':'arrow_drop_down')}}
+                    </em> -->
+                    <em class="material-icons " aria-hidden="true">
+
+                    </em>
+                  </th>
+                <th style="cursor:pointer; text-align:left;" (click)="SetSortingOptions('RedemptionDate')">
+                Coach
+                  <!-- <em class="material-icons {{PasskeysortingOptions.columnName === 'RedemptionDate'?'sort-focus-in':''}}" aria-hidden="true">
+                    {{PasskeysortingOptions.columnName === 'RedemptionDate' && (PasskeysortingOptions.columnOrder === 'ASC'?'arrow_drop_up':'arrow_drop_down')}}
+                  </em> -->
+                  <em class="material-icons " aria-hidden="true">
+
+                  </em>
+                </th>
+                <th style="cursor:pointer; text-align:left;" (click)="SetSortingOptions('RedemptionDate')">
+                  Actions
+                    <!-- <em class="material-icons {{PasskeysortingOptions.columnName === 'RedemptionDate'?'sort-focus-in':''}}" aria-hidden="true">
+                      {{PasskeysortingOptions.columnName === 'RedemptionDate' && (PasskeysortingOptions.columnOrder === 'ASC'?'arrow_drop_up':'arrow_drop_down')}}
+                    </em> -->
+                    <em class="material-icons " aria-hidden="true">
+
+                    </em>
+                  </th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let team of teamData" class="gradex">
+                <td  class="align-middle"  style="text-align: left;" >{{team.Name}}</td>
+                <td  class="align-middle"  style="text-align: left;"  > {{team.players}}</td>
+                <td  class="align-middle"  style="text-align: left;"  > {{team.ageGroup}}</td>
+                <td  class="align-middle"  style="text-align: left;">{{team.coach}}</td>
+                <td   style="text-align: left;">
+                  <button type="button" class="btn btn-primary m-2" (click)="editTeam()">View</button>
+                  <button type="button" class="btn btn-primary m-2" >Delete</button>
+                </td>
+
+                <!-- <td data-title="PublishedDate" style="text-align: left;">
+                  <span *ngIf='key.IsRedeemed'><i class="material-icons m-1 icons">done</i>Used</span>
+                  <span *ngIf='!key.IsRedeemed'><i class="material-icons m-1 icons">not_interested</i>Not Used</span>
+                </td> -->
+              </tr>
+              <tr *ngIf="teamData.length==0">
+                <td colspan="4">No records found</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <div class="adminpagination" id="example_length" *ngIf="PasskeypagingOptions.totalRecords > 25">
+          <div class="row-per-page form-inline">
+            <select id="ddrRowsPerPage" [(ngModel)]="PasskeyRowsPerPage" (ngModelChange)="SetTotalPagesPasskey()" tabindex="0" class="form-control">
+              <option *ngFor="let o of PasskeypagingOptions.pageSizes" [ngValue]="o" [innerText]="o"></option>
+            </select>
+            <label>
+              <span [innerText]="GetPasskeyPagingText()"></span>
+            </label>
+          </div>
+          <div class="sp-slider-wrapper">
+            <nav class="page-nav-wrap">
+              <button id="pagingminus" href="javascript:void(0)" aria-label="previous page" tabindex="0" (click)="loadPasskeys(PasskeypagingOptions.currentPage - 1)" [disabled]="!(PasskeypagingOptions.currentPage >= 2)"
+                [class]="PasskeypagingOptions.currentPage >= 2 ? 'page-nav-btn sp-prev':'page-nav-btn sp-prev'">
+                <em class="material-icons" aria-hidden="true">play_arrow</em>
+              </button>
+              <button id="pagingplus" href="javascript:void(0)" aria-label="next page" tabindex="0" (click)="loadPasskeys(PasskeypagingOptions.currentPage + 1)" [disabled]="!(PasskeypagingOptions.currentPage < PasskeypagingOptions.totalPages)"
+                [class]="PasskeypagingOptions.currentPage < PasskeypagingOptions.totalPages ? 'page-nav-btn sp-next':'page-nav-btn sp-next'">
+                <em class="material-icons" aria-hidden="true">play_arrow</em>
+              </button>
+            </nav>
+            <div class="sp-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+              <a class="ui-slider-handle ui-state-default ui-corner-all disabledAnchor" style="left: 0%;">
+                <span>{{PasskeypagingOptions.currentPage}}</span>
+              </a>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<app-update-teams *ngIf='isteamedit'> </app-update-teams>

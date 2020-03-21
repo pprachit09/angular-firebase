@@ -1,0 +1,75 @@
+<div class="logincontainer">
+<div class='maindiv'>
+  <form class="form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <!-- <h2>Login</h2> -->
+    <div class="form-group input-group">
+        <span class="input-group-addon">
+            <i class="material-icons">person</i>
+        </span>
+        <input type="text" name="Username"  [(ngModel)]="model.Username"  placeholder="Username" aria-label="Username"  class="form-control"
+        #Username="ngModel" [ngClass]="{ 'is-invalid': loginForm.submitted && Username.invalid }" required />
+    </div>
+    <div *ngIf="loginForm.submitted && Username.invalid" class="invalid-feedback">
+      <div *ngIf="Username.errors.required">Password is required</div>
+      <div *ngIf="Username.errors.minlength">Password must be at least 6 characters</div>
+  </div>
+    <div class="form-group input-group">
+        <span class="input-group-addon">
+            <i class="material-icons">lock</i>
+        </span>
+            <input type="{{(passwordToggel)?'text':'password'}}"  placeholder="Password" name="password" class="form-control" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': loginForm.submitted && password.invalid }" required>
+        <span class="input-group-addon"
+            (click)="(this.passwordToggel)?(this.passwordToggel=false):this.passwordToggel=true">
+            <a href="JavaScript:void(0);" aria-label="Show or hide password"><i class="material-icons">
+              {{passwordToggel?"visibility":"visibility_off"}}
+              </i></a>
+        </span>
+        <!-- <div *ngIf="loginForm.submitted && password.invalid" class="invalid-feedback">
+          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+      </div> -->
+    </div>
+
+    <div class="input-group checkLink">
+        <label class="form-check-label">
+            <input class="form-check-input remember m-0" id='remember_me'   [checked]='isRemember' aria-checked="false" type="checkbox">
+            <span>Remember me</span>
+        </label>
+    </div>
+
+    <div   class="alert alert-danger alert-dismissible wrongDataAlert" *ngIf='wrongDataAlert' tabindex="-1">
+        <span class="alertIcon">
+            <i class="material-icons">priority_high</i>
+        </span>
+        <span class="alertText" >Username or Password is incorrect. Please try again!</span>
+        <a href="JavaScript:void(0);" class="closeAlert" (click)='invalidDetails=false' aria-label="close">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+
+    <div *ngIf='submitted && loginForm.invalid'
+        class="alert alert-danger alert-dismissible wrongDataAlert" tabindex="-1">
+        <span class="alertIcon">
+            <i class="material-icons">priority_high</i>
+        </span>
+        <div *ngIf="submitted && Username.invalid && password.valid"   >
+            <div *ngIf="Username.errors.required" >Username cannot be blank</div>
+        </div>
+        <div *ngIf="submitted && password.invalid && Username.valid" >
+            <div *ngIf="password.errors.required" >Password cannot be blank</div>
+        </div>
+        <div *ngIf="submitted && password.invalid && Username.invalid">
+            <div *ngIf="password.errors.required" >Username and Password cannot be blank</div>
+        </div>
+
+        <a href="JavaScript:void(0);" class="closeAlert" (click)='submitted=false' aria-label="close">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary mb-2 formBtn" >Login</button>
+    </div>
+
+</form>
+</div>
+</div>

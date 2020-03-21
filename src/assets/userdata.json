@@ -1,0 +1,287 @@
+{
+	"userdata": {
+		"Players": [{
+        "Name": "Swapnil",
+        "lastname":"rabse",
+        "age": "26",
+        "role":"player",
+        "email":"swapnil@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "team":"teamA",
+        "position":"Striker"
+			},
+			{
+        "Name": "Deepak",
+        "lastname":"pawar",
+        "age": "24",
+        "role":"player",
+        "email":"deepak@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":false,
+        "team":"teamA",
+        "position":"Goal keeper"
+      },
+      {
+        "Name": "prachit",
+        "lastname":"patil",
+        "age": "25",
+        "role":"player",
+        "email":"ppatil@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "team":"teamB",
+        "position":"Defender"
+      },
+      {
+        "Name": "sagar",
+        "lastname":"patil",
+        "age": "26",
+        "role":"player",
+        "email":"spatil0@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "team":"teamB",
+        "position":"Defender"
+      },
+      {
+        "Name": "sid",
+        "lastname":"prajapati",
+        "age": "26",
+        "role":"player",
+        "email":"sid@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":false,
+        "team":"teamC",
+        "position":"midfielder"
+      },
+      {
+        "Name": "Akshay",
+        "lastname":"Sagvekar",
+        "age": "26",
+        "role":"player",
+        "email":"sagu@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "team":"teamC",
+        "position":"Stricker"
+      },
+      {
+				"Name": "ram",
+        "age": "26",
+        "lastname":"patil",
+        "role":"player",
+        "email":"swapnilrabse0@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "team":"teamA",
+        "position":"midfielder"
+			}
+    ],
+
+    "coaches": [{
+      "Name": "coachA",
+      "lastname":"rabse",
+      "age": "26",
+      "role":"coach",
+      "email":"swapnil@gmail.com",
+      "createdDate":"2/2/2020",
+      "isActive":true,
+      "team":"teamA"
+    },
+    {
+      "Name": "coachB",
+      "lastname":"pawar",
+      "age": "24",
+      "role":"coach",
+      "email":"deepak@gmail.com",
+      "createdDate":"2/2/2020",
+      "isActive":false,
+      "team":"teamB"
+    },
+    {
+      "Name": "coachC",
+      "lastname":"patil",
+      "age": "25",
+      "role":"coach",
+      "email":"ppatil@gmail.com",
+      "createdDate":"2/2/2020",
+      "isActive":true,
+      "team":"teamC"
+    }
+  ],
+    "users":[
+      {
+        "Name":"AclubAdmin",
+        "role":"admin",
+        "UserName":"adminA",
+        "password":"password"
+      },
+      {
+        "Name":"BclubAdmin",
+        "role":"admin",
+        "UserName":"adminB",
+        "password":"password"
+
+      },
+      {
+        "Name":"superAdmin",
+        "role":"superAdmin",
+        "UserName":"superadmin",
+        "password":"P@ssw0rd"
+
+      }
+    ],
+    "teams":[
+      { "id":1,
+        "Name":"teamA",
+        "players":"3",
+        "coach":"coachA",
+        "ageGroup":16
+
+      },
+      {
+        "id":2,
+        "Name":"teamB",
+        "players":"2",
+        "coach":"coachC",
+        "ageGroup":14
+
+      },
+      {
+        "id":3,
+        "Name":"teamC",
+        "players":"2",
+        "coach":"coachB",
+        "ageGroup":19
+
+      }
+    ],
+    "activities": [{
+      "Name": "Practice session",
+      "discription":"this is practice session 1",
+      "coach":"coachA",
+      "date":"5/3/2020",
+      "time":"6 Am",
+      "team":"teamA",
+      "status":"active"
+    },
+    {
+      "Name": "Practice Match",
+      "discription":"this is practice session 2",
+      "coach":"coachB",
+      "date":"5/3/2020",
+      "time":"11 Am",
+      "team":"teamB",
+      "status":"expired"
+    }
+  ]
+
+  },
+  "portfolioData":{
+    "players":[
+      {
+        "Name": "Swapnil",
+        "lastname":"rabse",
+        "age": "26",
+        "role":"player",
+        "email":"swapnil@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "username":"swap"      
+      },
+      {
+        "Name": "Deepak",
+        "lastname":"pawar",
+        "age": "24",
+        "role":"player",
+        "email":"deepak@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":false,
+        "username":"deep" 
+      },
+      {
+        "Name": "prachit",
+        "lastname":"patil",
+        "age": "25",
+        "role":"player",
+        "email":"ppatil@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "username":"ppatil" 
+      },
+      {
+        "Name": "sagar",
+        "lastname":"patil",
+        "age": "26",
+        "role":"player",
+        "email":"spatil0@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "username":"dragon" 
+      },
+      {
+        "Name": "sid",
+        "lastname":"prajapati",
+        "age": "26",
+        "role":"player",
+        "email":"sid@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":false,
+        "username":"sid" 
+      }
+    ],
+    "scouts":[
+      {
+        "Name": "Swapnil",
+        "lastname":"rabse",
+        "age": "26",
+        "club":"cluba",
+        "email":"swapnil@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "username":"swap"      
+      },
+      {
+        "Name": "Deepak",
+        "lastname":"pawar",
+        "age": "24",
+        "club":"clubB",
+        "email":"deepak@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":false,
+        "username":"deep" 
+      },
+      {
+        "Name": "prachit",
+        "lastname":"patil",
+        "age": "25",
+        "club":"clubC",
+        "email":"ppatil@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "username":"ppatil" 
+      },
+      {
+        "Name": "sagar",
+        "lastname":"patil",
+        "age": "26",
+        "club":"clubD",
+        "email":"spatil0@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":true,
+        "username":"dragon" 
+      },
+      {
+        "Name": "sid",
+        "lastname":"prajapati",
+        "age": "26",
+        "club":"clubE",
+        "email":"sid@gmail.com",
+        "createdDate":"2/2/2020",
+        "isActive":false,
+        "username":"sid" 
+      }
+    ]
+}
+}
