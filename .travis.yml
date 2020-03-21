@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "10"
+branches:
+  only:
+    - master
+install:
+  - npm i -g firebase-tools @angular/cli
+  - npm i && ng build
+after_success:
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then firebase deploy --token $FIREBASE_TOKEN; fi'
