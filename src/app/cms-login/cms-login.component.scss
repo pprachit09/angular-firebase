@@ -12,7 +12,7 @@
   max-width: 30%;
   height: auto;
   margin: 0 auto ;
-  padding: 30px 50px 0px 50px;
+  padding: 30px 50px 0;
   background-color: white;
   border-radius: 20px;
 }
@@ -51,7 +51,7 @@ form {
   position: relative;
 }
 .input-group-addon {
-  padding: 5px 5px;
+  padding: 5px;
 }
 .input-group input {
   color: #474747;
@@ -121,7 +121,7 @@ form {
 .form-check-label span {
   margin-left: 14px;
   vertical-align: unset;
-  margin-top: 0px;
+  margin-top: 0;
   display: inline-block;
   font-weight: bold;
 }
@@ -144,7 +144,7 @@ a.backToLogin {
   /* bottom: 77px; */
   align-items: center;
   /* position: absolute; */
-  padding: 10px 10px;
+  padding: 10px;
   justify-content: space-between;
   margin-bottom: 0;
   border-radius: 6px;
